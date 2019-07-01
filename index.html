@@ -14,7 +14,7 @@
         <script>
             function setHalfVolume() {
                 var myAudio = document.getElementById("audio");
-                myAudio.volume = 0.4;
+                myAudio.volume = 0.3;
             }
         </script>
         <audio id="audio" style="display:none;" src="Arigato.mp3" controls autoplay loop onloadeddata="setHalfVolume()">
@@ -22,7 +22,23 @@
     </div>
         <div class="header-overlay"></div>
         <div class="header-content">
-            <h1>Hello Everyone!</h1>
+
+             <h1 id="Text"></h1> 
+
+            <script type="text/javascript">
+                var i=0, text;
+                text = "Hello Everyone!";
+
+                function typing() {
+                    if(i<text.length){
+                        document.getElementById("Text").innerHTML +=text.charAt(i);
+                        i++;
+                        setTimeout(typing, 80);
+                    }
+                }
+                typing();
+            </script>
+
             <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. 
                 Modi ea ducimus reprehenderit aliquam. Accusamus, rem. 
                 Quidem nulla incidunt labore non.</p>
@@ -30,5 +46,30 @@
         </div>
     
     </header>
+
+    <div class="section section-a">
+        <div class="container">
+            <h1>Section A</h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                Repellat cum rerum quae quod asperiores accusantium, nihil nobis, 
+                soluta cumque nulla ea vitae. Autem recusandae, quod enim dicta minus 
+                mollitia at quia animi, ullam quae doloribus esse magnam dolorem, 
+                minima obcaecati nihil hic. Ab, doloribus sequi culpa tenetur fuga 
+                accusamus enim!</p>
+        </div>
+    </div>
+
+    <div class="section section-b">
+            <div class="container">
+                <h1>Section B</h1>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                    Repellat cum rerum quae quod asperiores accusantium, nihil nobis, 
+                    soluta cumque nulla ea vitae. Autem recusandae, quod enim dicta minus 
+                    mollitia at quia animi, ullam quae doloribus esse magnam dolorem, 
+                    minima obcaecati nihil hic. Ab, doloribus sequi culpa tenetur fuga 
+                    accusamus enim!</p>
+            </div>
+        </div>
+
 </body>
 </html>
